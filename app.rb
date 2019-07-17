@@ -8,4 +8,8 @@ puts 'Parsing JSON...'
 handles = JSON.parse(json_handles)
 
 puts 'Initializing bot...'
-# Bot.new(handles['journalists'])
+bot = Bot.new(handles['journalists'])
+
+puts 'Running bot...'
+bot.say_hi
+#bot.run
