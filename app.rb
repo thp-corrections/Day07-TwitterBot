@@ -16,4 +16,6 @@ bot.say_hi
 
 puts 'Bot\'s liking things...'
 bot.like_hashtag("#bonjour_monde")
-#bot.run
+
+puts 'Bot\'s streaming tweets...'
+bot.stream(["#bonjour_monde", "the_hacking_project"])
