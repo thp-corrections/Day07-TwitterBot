@@ -1,5 +1,6 @@
 require 'twitter'
 require 'dotenv'
+require 'pry'
 
 class Bot
   attr_reader :handles, :rest_client
@@ -14,6 +15,15 @@ class Bot
   def say_hi
     random_handles = handles.sample(5)
     random_handles.each { |handle| @rest_client.update("#{handle} J'adore ce que vous faites #bonjour_monde") }
+  end
+
+  def like_hashtag(hashtag)
+    results = rest_client.search(hashtag)
+    rest_client.favorite(results.to_a)
+  end
+
+  def run
+
   end
 
   private

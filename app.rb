@@ -11,5 +11,9 @@ puts 'Initializing bot...'
 bot = Bot.new(handles['journalists'])
 
 puts 'Running bot...'
+puts 'Bot\'s saying hi...'
 bot.say_hi
+
+puts 'Bot\'s liking things...'
+bot.like_hashtag("#bonjour_monde")
 #bot.run
